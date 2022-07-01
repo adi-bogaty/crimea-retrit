@@ -1,0 +1,150 @@
+/*
+section.schedule
+	container
+		h1
+		p.h1-sub
+		h2.schedule-day-num
+		h3.schedule-day-week
+
+		div.schedule-item
+			div.schedule-item-time
+			div.schedule-item-circle
+			div.schedule-item-txt
+				schedule-item-txt-time
+				h4.schedule-item-txt-title
+				ul
+					li
+*/
+.schedule-item-txt-time {
+	display: none;
+}
+.schedule {
+	font-family: "Trebuchet MS";
+	padding-bottom: 20px;
+}
+.schedule-container {
+	padding: 0px 250px;
+	/* width: 70%; */
+}
+.schedule h1 {
+	line-height: 0.8;
+	font-weight: 800;
+	margin-top: 55px;
+	color: #000;
+	font-size: 36pt;
+	margin-bottom: 10px;
+}
+.h1-sub {
+	font-size: 16pt;
+	margin-bottom: 40px;
+}
+.schedule-day-num {
+	text-transform: uppercase;
+	font-size: 14pt;
+	font-weight: 800;
+	color: #ff3333;
+	margin-top: 5px;
+	padding-top: 0;
+	margin-bottom: 30px;
+}
+.schedule-day-week {
+	font-size: 26pt;
+	font-weight: 800;
+	color: #ff3333;
+	margin-top: 0;
+	padding-top: 0;
+	margin-bottom: 20px;
+}
+.schedule-item-time,
+.schedule-item-txt-time,
+.schedule-item-circle,
+.schedule-item-txt-title {
+	color: #3333ff;
+	font-weight: 800;
+	font-size: 15pt;
+}
+.schedule-item-time {
+	padding-top: 19px;
+	padding-right: 20px;
+	text-align: right;
+}
+.schedule-item-time,
+.schedule-item-txt {
+	/* border: 1px green solid; */
+}
+.schedule-item-txt {
+	border-left: 3px #3333ff solid;
+	padding: 12px 35px;
+	margin-left: -20px;
+}
+.schedule-item-circle {
+	width: 20px;
+	min-width: 20px;
+	max-width: 20px;
+	height: 20px;
+	min-height: 20px;
+	max-height: 20px;
+
+	background-color: #3333ff;
+	border: 2px #f2f2f2 solid;
+	border-radius: 50%;
+
+	position: relative;
+	left: -8px;
+	top: 24px;
+}
+.schedule-item-time {
+	width: 140px;
+	min-width: 140px;
+	max-width: 140px;
+}
+.schedule-item {
+	display: flex;
+}
+
+.schedule ul {
+    list-style: none;
+		margin-left: -15px;
+		color: #0a0a0a;
+}
+.schedule ul > li {
+    padding-left: 30px;
+    position: relative;
+
+}
+.schedule ul > li:before {
+    content: '✔';
+    position: absolute;
+		top: 0;
+		left: 0;
+    color: #000;
+}
+
+.schedule-item-txt-time {
+	margin-top: 17px;
+	margin-bottom: 0;
+	font-size: 12pt;
+	line-height: 0.7;
+}
+
+
+
+
+@media screen and (max-width: 1202px) {
+	.schedule-container {
+		padding: 0px 100px;
+	}
+}
+@media screen and (max-width: 992px) {
+	.schedule-container {
+		padding: 0px 50px;
+	}
+}
+@media screen and (max-width: 730px) {
+	.schedule-item-time {
+		display: none;
+	}
+	.schedule-item-txt-time {
+		display: block;
+	}
+}
